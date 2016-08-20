@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="grid_column_width">185dp</dimen>
+    <dimen name="grid_vertical_space">0dp</dimen>
+    <dimen name="grid_horizontal_space">0dp</dimen>
+
+    <dimen name="poster_height">277dp</dimen>
+    <dimen name="poster_width">0dp</dimen>
+
+    <dimen name="image_height">187dp</dimen>
+</resources>
