@@ -1,21 +1,34 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmovies.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.example.android.popularmovies.common.Constants;
 
 /**
  * Created by mahme4 on 8/13/2016.
  */
 public class Movie implements Parcelable {
 
+    public static final String INTENT_EXTRA = "_MIE";
+    public static final Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>() {
+        @Override
+        public Movie createFromParcel(Parcel parcel) {
+            return new Movie(parcel);
+        }
+
+        @Override
+        public Movie[] newArray(int i) {
+            return new Movie[i];
+        }
+
+    };
     private int id;
     private String title;
     private String posterImage;
     private String overview;
     private Double rating;
     private String releaseDate;
-
-    public static final String INTENT_EXTRA = "_MIE";
 
     public Movie() {
     }
@@ -61,20 +74,20 @@ public class Movie implements Parcelable {
         this.overview = overview;
     }
 
-    public void setRating(Double rating) {
-        this.rating = rating;
-    }
-
     public Double getRating() {
         return rating;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 
     public String getReleaseDate() {
         return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public String getPosterUrl() {
@@ -109,17 +122,4 @@ public class Movie implements Parcelable {
         dest.writeDouble(rating);
         dest.writeString(releaseDate);
     }
-
-    public static final Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>() {
-        @Override
-        public Movie createFromParcel(Parcel parcel) {
-            return new Movie(parcel);
-        }
-
-        @Override
-        public Movie[] newArray(int i) {
-            return new Movie[i];
-        }
-
-    };
 }

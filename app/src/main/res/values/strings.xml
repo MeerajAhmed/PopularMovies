@@ -3,6 +3,16 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_movie_detail">Movie Details</string>
     <string name="title_activity_movie_settings">Settings</string>
+    <string name="label_favorites">Favorites</string>
+    <string name="db_insert_success">Added to favorites</string>
+    <string name="db_insert_failure">Unable to mark as favorites</string>
+    <string name="db_delete_success">Removed from favorites</string>
+    <string name="db_delete_failure">Unable to remove from favorites</string>
+    <string name="label_trailers">Trailers</string>
+    <string name="label_reviews">Reviews</string>
+    <string name="check_network">Please check if you are connected to Internet</string>
+    <string name="empty_movie_review">No reviews yet</string>
+
 
     <!-- Strings related to Movie Settings -->
 
@@ -14,18 +24,27 @@
 
     <string name="pref_sort_rating" translatable="false">rating</string>
 
+    <string name="pref_sort_favorite" translatable="false">favorite</string>
+
     <string name="pref_sort_popular_label">Most Popular</string>
 
     <string name="pref_sort_rating_label">Highest Rated</string>
 
+    <string name="pref_sort_favorite_label">Favorites</string>
+
+    <string name="empty_grid_view_movies">No movies to display</string>
+    <string name="empty_movie_trailer">No trailers found</string>
+
     <string-array name="pref_sort_options">
         <item>@string/pref_sort_popular_label</item>
         <item>@string/pref_sort_rating_label</item>
+        <item>@string/pref_sort_favorite_label</item>
     </string-array>
 
     <string-array name="pref_sort_values">
         <item>@string/pref_sort_popular</item>
         <item>@string/pref_sort_rating</item>
+        <item>@string/pref_sort_favorite</item>
     </string-array>
 
 

@@ -11,4 +11,6 @@
     <dimen name="poster_width">0dp</dimen>
 
     <dimen name="image_height">187dp</dimen>
+    <dimen name="movie_list_item_margin">4dp</dimen>
+
 </resources>

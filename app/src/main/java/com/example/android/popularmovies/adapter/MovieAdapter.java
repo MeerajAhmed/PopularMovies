@@ -1,4 +1,4 @@
-package com.example.android.popularmovies;
+package com.example.android.popularmovies.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
+import com.example.android.popularmovies.R;
+import com.example.android.popularmovies.model.Movie;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.List;
  */
 public class MovieAdapter extends ArrayAdapter<Movie> {
 
-    MovieAdapter(Activity context, List<Movie> movieList) {
+    public MovieAdapter(Activity context, List<Movie> movieList) {
         super(context, 0, movieList);
     }
 
@@ -30,11 +32,12 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
                     R.layout.movie_list_item, parent, false);
         }
 
-        ImageView movieImageView = (ImageView) convertView.findViewById(R.id.movie_image);
-
-        Picasso.with(getContext())
-                .load(movie.getPosterUrl())
-                .into(movieImageView);
+        if(movie != null){
+            ImageView movieImageView = (ImageView) convertView.findViewById(R.id.movie_image);
+            Picasso.with(getContext())
+                    .load(movie.getPosterUrl())
+                    .into(movieImageView);
+        }
 
         return convertView;
     }
